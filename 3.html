@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Enter your marks:
+	<input id="Marks" type="number">
+	<button onclick="check()">Submit</button>
+	<p id="txt"></p>
+	<script type="text/javascript">
+		function check()
+		{
+			var marks = document.getElementById("Marks").value;
+			var show;
+			if(marks >= 80 && marks <= 100){
+				show = "Distinction";
+			}
+			else if(marks >= 60 && marks < 80){
+				show = "First Division";
+			}
+			else if(marks >= 50 && marks < 60){
+				show = "Second Division";
+			}
+			else if(marks >= 40 && marks < 50){
+				show = "Third Division";
+			}
+			else if(marks >= 0 && marks < 40){
+				show = "Fail";
+			}
+			else{
+				show = "Invalid Marks!";
+			}
+			document.getElementById("txt").innerHTML = show;
+		}
+	</script>
+</body>
+</html>
